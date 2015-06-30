@@ -1,0 +1,10 @@
+AuthName "EnterPassword"
+AuthType Basic
+AuthUserFile /home/shwizle/webapps/snailmailmyemail/artistUtility/.htpasswd
+require valid-user
+
+# Hide files starting with a dot (.htaccess and .htpasswd in particular)
+<Files .*>
+order allow,deny
+deny from all
+</Files>

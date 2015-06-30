@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName " Statistics"
+AuthName "snailmailmyemail.org Statistics"
+AuthUserFile /var/chroot/home/content/17/10074417/html/stats/.statspwd
+Require valid-user
+DirectoryIndex index.html

@@ -1,0 +1,374 @@
+	/* 
+* Skeleton V1.0.3
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 7/17/2011
+*/
+
+/* Custom Styles added by Scottblew.me
+================================================== */
+
+
+body {
+	background:#e4e4e4 url(../images/beige_paper.png) repeat 0 0 scroll;
+	color:#333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	text-shadow:0 1px 1px rgba(255, 255, 255, 0.3);
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-weight:400;	
+}
+
+p {
+	line-height: 1.6em;
+}
+
+.lg{
+	font-size: 32px;
+}
+
+.menu {
+	position: fixed;
+	height: 45px;
+	background: #fff url(../images/hr_bg.png) repeat-x 0 bottom;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 10;
+}
+
+p.lg {
+font-size:35px;
+}
+
+
+#nav {
+	float: left;
+	margin: 12px 10px 0;
+}
+
+#nav li {
+	float:left;
+	margin:0px 20px;
+	cursor: pointer;
+}
+
+#nav li a {
+  text-decoration:none;
+}
+#nav li.current a,#nav li a:hover {
+  text-decoration:underline;
+}
+
+#instructions,#gallery,#map {
+	padding:34px 0 0;
+}
+
+.logo {
+	margin: 70px 44% 2%;
+}
+
+.intro h2{
+	line-height: 1.7em;
+}
+
+hr {
+	border:none;
+	background:transparent url(../images/hr_bg.png) repeat-x 0 0;
+	height:2px;
+}
+
+hr.small {
+	margin: 10px 0 15px;
+}
+
+hr.space {
+	margin: 10px 0 35px;
+}
+
+hr.hidden {
+	background:none;
+}
+
+.header hr {
+	margin:10px 0 20px;
+}
+
+.header h1 {
+	color:#000;
+	font-size: 5em;
+	line-height: 1.2em;
+	/*text-shadow:1px 1px rgba(255,0,102,0.25), 2px 2px rgba(255, 0, 102, 0.25), 3px 3px rgba(255, 0, 102, 0.25), 4px 4px rgba(255, 0, 102, 0.25), 5px 5px rgba(255, 0, 102, 0.5);*/
+}
+
+.addthis_toolbox {
+	float: right;
+	min-width: 210px;
+	margin: 12px 20px 0;
+}
+
+.center {
+	text-align:center;
+}
+
+#instructions .column.one-third {
+	min-height:290px;
+}
+
+#footer .column.one-third {
+	min-height:450px;
+	margin-bottom:25px;
+}
+
+
+.column.one-third.border {
+	padding-right:20px;
+	background:transparent url(../images/vertical_bg.png) repeat-y right 0;
+	width:280px;
+}
+
+.column.one-third.border.last {
+	background:none;
+	padding:0px;
+}
+
+#technical{
+	font-size: 14px;
+	text-align: center;
+	padding: 0px 0 50px 0;	
+	}
+
+.press{
+	padding-top: 80px;
+	}
+
+.press ul {
+	margin:0px auto;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.press ul li{
+	float:left;
+	margin:0 20px;
+}
+
+.press img {
+	/* for IE */
+	  filter:alpha(opacity=75);
+	opacity:0.75;
+}
+
+#icons {
+	height:120px;
+	background:transparent url(../images/icons.png) no-repeat center top;
+	margin:35px auto 5px auto;
+	text-align: center;
+	width: 100%;
+}
+
+.visible-sm{
+	display: none;
+	}
+.visible-md{
+	display: none;
+	}	
+.hidden-sm{
+	display: inline-block;
+	}
+.centered{
+	text-align: center;
+	width: 100%;
+	}
+.learn-more{
+	cursor: pointer;	
+	}
+.nav-item{
+	cursor: pointer;
+	}	
+
+@media (max-width: 959px){
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width:100%; 
+		height: 612px;
+		}
+	#thebook-image{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		height: 600px;
+		background: url(../images/book-600.png) no-repeat white center top;
+		background-size: cover;
+		}
+	
+	.column.one-third.border {
+		background: none;
+	}
+	.img-responsive{
+		height: auto;
+		width: 100%;
+		}
+	p.lg{
+		font-size: 20px;
+		}
+	.lg{ font-size: 20px; }
+	.visible-sm{
+		display: inline;
+		}
+	.hidden-sm{
+		display: none;
+		}
+	#small-menu-hamburger{
+		z-index: 998;
+		position: fixed;
+		text-indent: 50px;
+		line-height: 40px;
+		color: black;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		display: block;
+		background: #ffffff url(../images/hamburger-nav.png) no-repeat;
+		border-bottom: 1px solid #333;
+		background-position: 5px 7px;
+		cursor: pointer;
+		}	
+	#small-menu-slider{
+		position: fixed;
+		z-index: 999;
+		top:0px;
+		left:-221px;
+		width: 220px;
+		height: 100%;
+		background: #ffffff;
+		border-right: 1px solid gray;
+		border-bottom: 1px solid gray;
+		}
+		#small-menu-slider #small-nav{
+			margin: 30px;
+			z-index: 999;
+			}
+		#small-nav li{
+			float: none;
+			height: 32px;
+			line-height: 32px;
+			}
+		#small-menu-close{
+			position: absolute;
+			top: 10px; 
+			right: 10px;
+			display: block;
+			cursor: pointer;
+			}
+		
+		#small-menu-slider #small-nav li{
+			cursor: pointer;
+			float: none;
+			height: 38px;
+			line-height: 28px;
+			text-align: left;
+			width: 150px;
+			border-bottom: 1px solid silver;
+			}
+			#small-menu-slider #small-nav li:last-child{
+				border-bottom: none;
+				}
+		#small-nav li a, #small-nav li a:hover, #small-nav li a:visited{
+			text-decoration: none !important;
+			}	
+		#small-menu-slider #social-small{
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+			}
+			#small-menu-slider #social-small a{
+				float: none;
+				width: 200px;
+				height: 30px;
+				margin: 5px 0px;
+				}
+		.thebook-link{
+			width: 100%;
+			max-width: 600px;
+			min-width: 320px;
+			margin: 0 auto;
+			text-align: center;
+			background: #ffffff;
+			}	
+
+	#footer #footer-about, #footer #footer-team, #footer #footer-involved{
+		text-align: center;
+		float: none;
+		width: 90% !important;
+		position: relative;
+		margin: 0 auto !important;
+		padding: 0px !important; 
+		}
+	.press ul{
+		float: none;
+		width: 200px;
+		margin: 0 auto;
+		}
+	.press ul li{
+		padding: 0px;
+		float: none;
+		margin: 5px 0;
+		text-align: center;
+		width: 200px;
+		}	
+}	
+
+
+
+@media (max-width: 800px){
+	.visible-lg{
+		display: inline;
+		}
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width: 100%; 
+		height: 802px;
+		}
+}	
+
+@media (max-width: 550px){
+	.hidden-sm{
+		display: none;	
+		}
+	.visible-lg{
+		display: none;
+		}
+	.visible-md{
+		display: inline;	
+		}
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width: 100%; 
+		height: 502;
+		}
+}	
+
+
+@media (max-width: 399px ){
+	.visible-lg{
+		display: none;
+		}
+	.visible-md{
+		display: hidden;	
+		}	
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width:100%; 
+		height: 362px;
+		}
+}
+

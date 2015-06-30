@@ -1,0 +1,22 @@
+/* CSS Document */
+
+
+.pagination a {
+	font-size: 18px;
+	line-height: 20px;
+	padding: 7px 14px;
+	background-color: #383A3C;
+	color: white;
+}
+
+.pagination a:hover {
+	background-color:#000;
+}
+
+.pagination.centered {
+	width: 208px;
+}
+
+.media-grid {
+height: 570px;
+}

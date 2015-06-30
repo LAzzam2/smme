@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, html {
+/background-image:url(img/background-2.jpg);
+/background-repeat:repeat-x;
+background-color:white;
+font-family:helvetica, arial, sans serif;
+margin: 0 auto;
+padding:0;
+/height: 1296px;
+background-position:center;
+text-align:center;
+ }
+
+
+#wrapper {
+width:1200px;
+margin: 0 auto;
+/margin-top:50px;
+padding:0;
+background-position: 50%;
+}
+
+
+.fb-like {	
+position:relative;
+text-align:center;
+margin-top:20px;
+margin-bottom:-10px;
+padding-left:20px;
+}
