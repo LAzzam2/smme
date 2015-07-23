@@ -1,6 +1,7 @@
 var gulp        = require( 'gulp' );
 var runSequence = require( 'run-sequence' );
 var requireDir  = require( 'require-dir' );
+var symlink 	= require('gulp-symlink');
 
 
 
@@ -18,7 +19,7 @@ gulp.task( 'default', function(  )
 			'sass',
 			'scripts',
 			'images',
-			'favicon'
+			'favicon',
 		],
 		'watch',
 		'connect'
@@ -41,3 +42,11 @@ gulp.task( 'build', function(  )
 		'connect'
 	);
 } );
+
+
+
+ 
+gulp.task('videos', function () {
+  return gulp.src('videos/')
+    .pipe(symlink('build/videos')) // Write to the destination folder 
+});

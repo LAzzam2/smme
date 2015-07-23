@@ -39,6 +39,11 @@ module.exports =
 		{
 			source: root + '/favicon.png',
 			destination: destination
-		}
+		},
+		videos:
+		{
+			source: root + '/videos/**/*.*',
+			destination: destination + 'videos'
+		},
 	}
 };
