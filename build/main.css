@@ -721,6 +721,16 @@ p {
 .lg {
   font-size: 32px; }
 
+#videobg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+  #videobg video {
+    height: 100%;
+    width: 100%; }
+
 .menu {
   position: fixed;
   height: 45px;
