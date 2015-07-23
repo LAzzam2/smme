@@ -19,6 +19,7 @@ gulp.task( 'default', function(  )
 			'sass',
 			'scripts',
 			'images',
+			'videos',
 			'favicon',
 		],
 		'watch',
@@ -42,11 +43,3 @@ gulp.task( 'build', function(  )
 		'connect'
 	);
 } );
-
-
-
- 
-gulp.task('videos', function () {
-  return gulp.src('videos/')
-    .pipe(symlink('build/videos')) // Write to the destination folder 
-});

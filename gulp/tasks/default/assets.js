@@ -20,3 +20,10 @@ gulp.task( 'favicon', function(  )
 		.pipe( gulp.dest( path.to.favicon.destination ) )
 		.pipe( connect.reload(  ) );
 } );
+
+gulp.task( 'videos', function(  )
+{
+	return gulp.src( path.to.videos.source )
+		.pipe( gulp.dest( path.to.videos.destination ) )
+		.pipe( connect.reload(  ) );
+} );
