@@ -9,7 +9,38 @@
 
 $(document).ready(function() {
 	
+(function ($) {
+
+	$.fn.photoResize = function (options) {
+
+		var element	= $(this), 
+			defaults = {
+	            bottomSpacing: 10
+			};
+		
+		$(element).load(function () {
+			updatePhotoHeight();
+
+			$(window).bind('resize', function () {
+				updatePhotoHeight();
+			});
+		});
+
+		options = $.extend(defaults, options);
+
+		function updatePhotoHeight() {
+			var o = options, 
+				photoHeight = $(window).height();
+
+			$(element).attr('height', photoHeight - o.bottomSpacing);
+		}
+	};
+
+}(jQuery));
 	
+	$("#logo").photoResize({
+		bottomSpacing: 15
+	});
 	
 	$("#small-menu-close").click(function(){
 		$("#small-menu-slider").animate({left:"-221px"}, 500);

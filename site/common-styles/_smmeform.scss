@@ -95,11 +95,11 @@ FORM
 		color: #f00b0b;
 		}
 		#name-address #address-text{
-			box-shadow: inset 0px 2px 2px #a8a8a8;
+			box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 			width: 300px;
 			height: 160px;
 			background: white url(images/address-bkg.png);
-			border-radius: 6px;
+			border-radius: 3px;
 			font-size: 20px;
 			line-height: 40px;
 			padding: 12px 32px;
@@ -128,7 +128,7 @@ FORM
 			}	
 		#custom-option #custom-suggestion{
 			font-style: normal;
-			box-shadow: inset 0px 2px 2px #a8a8a8;
+			box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 			border: none;
 			background: white;
 			opacity: 0;
@@ -145,10 +145,10 @@ FORM
 		top: 428px;
 		}
 		#email #input-email{
-			box-shadow: inset 0px 2px 2px #a8a8a8;
+			box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 			border: none;
 			background: white;
-			border-radius: 6px;
+			border-radius: 3px;
 			font-size: 22px;
 			line-height: 30px;
 			padding: 6px;
@@ -162,14 +162,14 @@ FORM
 		right: 0px;
 		}
 		#message #message-text{
-			box-shadow: inset 0px 2px 2px #a8a8a8;
+			box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 			background: white;
 			border: none;
 			padding: 32px;
 			width: 400px;
 			line-height: 30px;
 			font-size: 16px;
-			border-radius: 6px;
+			border-radius: 3px;
 			min-height: 400px;
 			}
 	
@@ -185,16 +185,18 @@ FORM
 		line-height: 60px;
 		font-size: 16px;
 		cursor: pointer;
-		-moz-border-radius:6px;
-		-webkit-border-radius:6px;
-		border-radius:6px;
-		}
-	#send-a-letter #form-button:hover{
-		background: #097da7;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		border-radius:3px;
+		box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 		-moz-transition-duration: 0.6s;
 		-webkit-transition-duration: 0.6s;
 		-o-transition-duration: 0.6s;
 		transition-duration: 0.6s;
+		}
+	#send-a-letter #form-button:hover{
+		background: #03a0d8;
+		box-shadow: 0px 2px 2px rgba(0,0,0,.5);
 		}
 	
 	#send-a-letter #legal{
@@ -307,7 +309,7 @@ FORM
 		padding: 0px;
 		}
 	#name-address #address-text{
-		box-shadow: inset 0px 2px 2px #a8a8a8;
+		box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 		width: 100%;
 		height: 160px;
 		background: white url(images/address-bkg-rpt.png) center top repeat-x;
