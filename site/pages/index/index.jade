@@ -143,53 +143,55 @@ html(lang='en')
           h1.center Send a Letter
           #form-wrapper
             form(id='', action='POST')
-              #name-address
-                .title.bold.black RECIPIENT'S FULL NAME & MAILING ADDRESS:
-                #address-text
-                  input#input-name.name-address(type='text')
-                  input#input-address1.name-address(type='text')
-                  input#input-address2.name-address(type='text')
-                  input#input-address3.name-address(type='text')
-              #custom-option.hidden-sm
-                .title.bold.black ONE CUSTOM OPTION:
-                input.custom(type='radio', name='custom-option', checked='1', value='Doodle')
-                em Doodle
-                input.custom(type='radio', name='custom-option', value='Lipstick Kiss')
-                em Lipstick Kiss
-                input.custom(type='radio', name='custom-option', value='Flower Petal')
-                em Flower Petal
-                br
-                #suggest-your-own
-                  input.custom(type='radio', name='custom-option', value='Suggest your own')
-                  em Suggest your own
-                input#custom-suggestion(type='text', value='', disabled='')
-              #custom-option-small.visible-sm
-                select#custom-option-dropdown
-                  option(name='custom-option', value='default') ONE CUSTOM OPTION:
-                  option(name='doodle', value='Doodle') Doodle
-                  option(name='lipstick-kiss', value='Lipstick Kiss') Lipstick Kiss
-                  option(name='flower-petal', value='Flower Petal') Flower Petal
-                  option(name='suggest-your-own', value='Suggest your own') Suggest your own
-                input#custom-suggestion-small(type='text', value='', disabled='')
-              #email
-                .title.bold.black YOUR EMAIL:
-                input#input-email(type='text', rows='22', name='email')
-                .small.black
-                  em This will be used to confirm your request and will never be shared.
-              #message
-                .title.bold.black
-                  | MESSAGE: 
-                  span#message-counter 800 Characters
-                textarea#message-text(name='message', maxlength='800')
-              #legal
-                input#legal-checkbox(type='checkbox', name='legal')
-                #legal-text.small.black
-                  | Check here once you've read over your letter for spelling errors and agree to our 
-                  a#privacy-btn Privacy
-                  |  & 
-                  a#legal-btn Legal Notice
-                  | . Only one request per person please.
-              #form-button SEND LETTER
+              .left
+                #email
+                  .title.bold.black YOUR EMAIL:
+                  input#input-email(type='text', rows='22', name='email')
+                  .small.black
+                    em This will be used to confirm your request and will never be shared.
+                #name-address
+                  .title.bold.black RECIPIENT'S FULL NAME & MAILING ADDRESS:
+                  #address-text
+                    input#input-name.name-address(type='text')
+                    input#input-address1.name-address(type='text')
+                    input#input-address2.name-address(type='text')
+                    input#input-address3.name-address(type='text')
+              .right
+                #custom-option.hidden-sm
+                  .title.bold.black ONE CUSTOM OPTION:
+                  input.custom(type='radio', name='custom-option', checked='1', value='Doodle')
+                  em Doodle
+                  input.custom(type='radio', name='custom-option', value='Lipstick Kiss')
+                  em Lipstick Kiss
+                  input.custom(type='radio', name='custom-option', value='Flower Petal')
+                  em Flower Petal
+                  br
+                  #suggest-your-own
+                    input.custom(type='radio', name='custom-option', value='Suggest your own')
+                    em Suggest your own
+                  input#custom-suggestion(type='text', value='', disabled='')
+                #custom-option-small.visible-sm
+                  select#custom-option-dropdown
+                    option(name='custom-option', value='default') ONE CUSTOM OPTION:
+                    option(name='doodle', value='Doodle') Doodle
+                    option(name='lipstick-kiss', value='Lipstick Kiss') Lipstick Kiss
+                    option(name='flower-petal', value='Flower Petal') Flower Petal
+                    option(name='suggest-your-own', value='Suggest your own') Suggest your own
+                  input#custom-suggestion-small(type='text', value='', disabled='')
+                #message
+                  .title.bold.black
+                    | MESSAGE: 
+                    span#message-counter 800 Characters
+                  textarea#message-text(name='message', maxlength='800')
+                #legal
+                  input#legal-checkbox(type='checkbox', name='legal')
+                  #legal-text.small.black
+                    | Check here once you've read over your letter for spelling errors and agree to our 
+                    a#privacy-btn Privacy 
+                    & 
+                    a#legal-btn Legal Notice. 
+                    Only one request per person please.
+                #form-button SEND LETTER
         #map.sixteen.columns
           div.map-wrap
             div.disable

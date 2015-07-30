@@ -45,6 +45,17 @@ OVERLAY
 /*-------------------------------------------------------
 FORM
 --------------------------------------------------------*/
+.left, .right {
+	width: 46%;
+	float: left;
+}
+.right {
+	float: right;
+}
+input, textarea, #address-text {
+    box-sizing: border-box;
+}
+
 
 #send-a-letter #success-text{
 	width: 740px;
@@ -62,6 +73,7 @@ FORM
 	}
 	#form-wrapper{
 		position: relative;
+		margin: 45px auto 0px auto;
 		}
 	#send-a-letter textarea{
 		resize: none;
@@ -83,9 +95,6 @@ FORM
 		line-height: 40px;
 		}
 	#send-a-letter #name-address{
-		position: absolute;
-		top: 6px;
-		width: 400px;
 		}
 	#message-counter{
 		font-weight: normal;
@@ -96,35 +105,37 @@ FORM
 		}
 		#name-address #address-text{
 			box-shadow: 0px 2px 2px rgba(0,0,0,.05);
-			width: 300px;
-			height: 160px;
-			background: white url(images/address-bkg.png);
+			background: white;
 			border-radius: 3px;
 			font-size: 20px;
 			line-height: 40px;
-			padding: 12px 32px;
+			padding: 20px 32px;
+				input:last-of-type{
+					margin-bottom: 20px;
+				}
 			}
 			input.name-address{
 				background: none;
-				width: 290px;
+				width: 100%;
 				font-size: 22px;
 				line-height: 30px;
 				margin: 0 0 0px 0;
 				border: none;
+				border-bottom: 1px solid rgba(0,0,0,.4);
 				}
 			input.name-address:focus{
 				border: none;
-				outline: 0;
-				}
+				border-bottom: 2px solid rgba(0,0,0,.4);
+				outline: none;
+				box-shadow: none;
+			}
 			
 	#send-a-letter #custom-option{
-		position: absolute;
 		font-size: 14px;
-		top: 280px;		
 		}
 		#suggest-your-own{
 			float: left;
-			margin: 20px 0 0 0;
+			margin: 15px 0 10px 0;
 			}	
 		#custom-option #custom-suggestion{
 			font-style: normal;
@@ -137,12 +148,12 @@ FORM
 			padding: 4px;
 			width: 200px;
 			margin: 15px 0 0 0;
-			float: right;
 			}
 	
 	#send-a-letter #email{
-		position: absolute;
-		top: 428px;
+		input {
+			padding: 15px 30px;
+		}
 		}
 		#email #input-email{
 			box-shadow: 0px 2px 2px rgba(0,0,0,.05);
@@ -152,33 +163,32 @@ FORM
 			font-size: 22px;
 			line-height: 30px;
 			padding: 6px;
-			width: 352px;
+			width: 100%;
 			}
 		
 	#send-a-letter #message{
-		position: absolute;
-		top: 6px;
-		width: 465px;
-		right: 0px;
 		}
 		#message #message-text{
 			box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 			background: white;
 			border: none;
 			padding: 32px;
-			width: 400px;
 			line-height: 30px;
 			font-size: 16px;
 			border-radius: 3px;
-			min-height: 400px;
+			min-height: 270px;
+			width: 100%;
 			}
+	input[type=radio]{
+		margin-right: 5px;
+	}
+	em {
+		margin-right: 15px;
+	}
 	
 	#send-a-letter #form-button{
-		width: 465px;
+		width: 100%;
 		color: white;
-		position: absolute;
-		top: 540px;
-		right: 0px;
 		font-weight: bold;
 		background: #05afec;
 		text-align: center;
@@ -200,19 +210,15 @@ FORM
 		}
 	
 	#send-a-letter #legal{
-		position: absolute;
-		top: 620px;
-		right: 0px;
-		width: 465px;
+		margin-bottom: 10px;
+		input {
+			float: left;
+		}
 		}
 		#legal #legal-checkbox{
-			position: absolute;
-			top: 10px;
 			}
 		#legal #legal-text{
 			font-style: italic;
-			width: 440px;
-			float: right;
 			line-height: 20px;
 			}
 		#legal-btn, #privacy-btn{
@@ -225,7 +231,6 @@ FORM
 @media (max-width: 400px){
 	#send-a-letter #message-text{
 		margin: 15px auto;
-		top: 0px;
 		height: 300px;
 		width: 100%;
 		position: relative;
@@ -233,9 +238,11 @@ FORM
 	}
 
 @media (max-width: 959px){
-	
+	.left, .right {
+		clear: both;
+		width: 100%;
+	}
 	#form-wrapper{
-		width: 90%;
 		margin: 0 auto;
 		}
 
@@ -277,25 +284,19 @@ FORM
 	#send-a-letter #legal-text{
 		margin: 15px auto;
 		width: 100%;
-		position: relative;
-		top: 0px;
 		}
 	#send-a-letter #email{
 		margin: 20px auto;
 		width: 100%;
-		position: relative;
-		top: 0px;
 		}
 	#email #input-email{
-		padding: 5px 0px;
+		padding: 5px 15px;
 		width: 100%;
 		}	
 	#send-a-letter #custom-option{
 		margin: 15px auto;
 		width: 100%;
 		height: 150px;
-		position: relative;
-		top: 0px;
 		}
 	#custom-option #custom-suggestion{
 		width: 100%;
@@ -303,57 +304,44 @@ FORM
 		}	
 	
 	#send-a-letter #name-address{
-		width: 90%;
-		height: 270px;
-		position: relative;
 		padding: 0px;
+		margin-bottom: 25px;
 		}
 	#name-address #address-text{
 		box-shadow: 0px 2px 2px rgba(0,0,0,.05);
 		width: 100%;
-		height: 160px;
-		background: white url(images/address-bkg-rpt.png) center top repeat-x;
+		background: white;
 		border-radius: 6px;
 		font-size: 20px;
 		line-height: 40px;
-		padding: 12px;
 		}
 	input.name-address{
 		background: none;
-		width: 80%;
 		font-size: 22px;
 		line-height: 30px;
-		margin: 0 auto;
-		border: none;
 		}
 			
 	#message #message-text{
 		width: 100%;
-		padding: 0px;
+		padding: 15px;
 		}
 		
 	#send-a-letter #message{
 		margin: 15px auto;
 		top: 0px;
 		width: 100%;
-		position: relative;
 		}
 	#send-a-letter #form-button{
 		margin: 15px auto;
 		top: 0px;
 		width: 100%;
-		position: relative;
 		}
 	#send-a-letter #legal{
 		margin: 15px auto;
-		position: relative;
 		top: 0px;
-		width: 90%;
 		}
 		#legal #legal-text{
 			font-style: italic;
-			width: 90%;
-			float: right;
 			line-height: 20px;
 			}
 	#overlay-box-wrapper{
