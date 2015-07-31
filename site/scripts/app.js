@@ -50,6 +50,14 @@ $(document).ready(function() {
 		$("#small-menu-slider").animate({left:"0px"}, 500);
 	});
 	
+	$(".disable").click(function(){
+		$(this).css({
+			pointerEvents:"none",
+			opacity: 0,
+		});
+		$(this).siblings('h1').css({top: '-50px'});
+	});
+	
 	
 	
 	
