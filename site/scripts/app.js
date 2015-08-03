@@ -8,8 +8,38 @@
 */	
 
 $(document).ready(function() {
+
+	$('#clock').countdown('2015/11/09 12:34:56')
+	.on('update.countdown', function(event) {
+	  var format = '<span>%-D</span> days <span>%-H</span> hours <span>%M</span> minutes <span>%S</span> seconds';
+	  $(this).html(event.strftime(format));
+	 })
+	 .on('finish.countdown', function(event) {
+	 	$(this).html('This offer has expired!');
+	});
+
+
+	function isScrolledIntoView(elem)
+	{
+		var $elem = $(elem);
+		var $window = $(window);
+
+		var docViewTop = $window.scrollTop();
+		var docViewBottom = docViewTop + $window.height();
+
+		var elemTop = $elem.offset().top;
+		var elemBottom = elemTop + $elem.height();
+
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	}
+
+	$( "#target" ).scroll(function() {
+		map = $('.map-wrap');
+	  	isScrolledIntoView(map);
+	});
 	
 (function ($) {
+
 
 	$.fn.photoResize = function (options) {
 
@@ -56,6 +86,7 @@ $(document).ready(function() {
 			opacity: 0,
 		});
 		$(this).siblings('h1').css({top: '-50px'});
+		$('.map-wrap').css('margin','125px 0px 35px 0px');
 	});
 	
 	

@@ -59,7 +59,7 @@ $(document).ready(function()
 	//SCROLL LISTENER FOR TOP NAV AND WAYPOINTS
 	$(window).scroll(function(){			
 		var homeTop = $('#logo').offset().top - $(window).scrollTop();
-		//var letterTop = $('#send-a-letter').offset().top - $(window).scrollTop();
+		var letterTop = $('#send-a-letter').offset().top - $(window).scrollTop();
 		var mapTop = $('#map').offset().top - $(window).scrollTop();
 		var galleryTop = $('#gallery').offset().top - $(window).scrollTop();
 		var bookTop = $('#book-lg').offset().top - $(window).scrollTop();
@@ -67,7 +67,7 @@ $(document).ready(function()
 		
 			
 		if(homeTop <= 45 && $('#nav-home').hasClass('current') != true && isInViewport( $('#logo') ) ) { highlightNav('nav-home'); } else {};
-		//if(letterTop <= 45 && $('#nav-send-a-letter').hasClass('current') != true && isInViewport( $('#send-a-letter') ) ) { highlightNav('nav-send-a-letter'); } else {};
+		if(letterTop <= 45 && $('#nav-send-a-letter').hasClass('current') != true && isInViewport( $('#send-a-letter') ) ) { highlightNav('nav-send-a-letter'); } else {};
 		if(mapTop <= 45 && $('#nav-map').hasClass('current') != true && isInViewport( $('#map') )) { highlightNav('nav-map'); } else {};
 		if(galleryTop <= 45 && $('#nav-gallery').hasClass('current') != true && isInViewport( $('#gallery') )) { highlightNav('nav-gallery'); } else {};
 		if(bookTop <= 45 && $('#nav-book').hasClass('current') != true && isInViewport( $('#book-lg') )) { highlightNav('nav-book'); } else {};

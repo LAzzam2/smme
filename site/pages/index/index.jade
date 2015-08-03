@@ -64,9 +64,18 @@ html(lang='en')
     #overlay-gray
     #videobg
       video( autoplay loop)
-        source(src="videos/smme_bg.mp4", type="video/mp4")
+        source(src="videos/smme_bg.mp4", type="video/mp4", poster="images/poster.jpg")
     #home()
-      img#logo(src='images/snailmail-vert.png')
+      img#logo(src='images/smme-logo-vertical-white.png')
+      div.press
+        img(src="images/press-logos-white/cnn.png" alt="cnn")
+        img(src="images/press-logos-white/forbes.png" alt="forbes")
+        img(src="images/press-logos-white/gizmodo.png" alt="gizmodo")
+        img(src="images/press-logos-white/la-times.png" alt="la-times")
+        img(src="images/press-logos-white/mashable.png" alt="mashable")
+        img(src="images/press-logos-white/post-secret.png" alt="post-secret")
+        img(src="images/press-logos-white/usps.png" alt="usps")
+        img(src="images/press-logos-white/wsj.png" alt="wsj")
     .wrap
       .container
         #small-menu.visible-sm
@@ -74,8 +83,10 @@ html(lang='en')
           #small-menu-slider
             #small-menu-close CLOSE X
             ul#small-nav
-              li#nav-home.nav-item(data-panel-id='home') Home
-              // <li id="nav-send-a-letter" class="nav-item" data-panel-id="send-a-letter"><a>Send a Letter</a></li>
+              //- li#nav-home.nav-item(data-panel-id='home') 
+              //-   a Home
+              li#nav-send-a-letter.nav-item( data-panel-id="send-a-letter" )
+                a Send a Letter
               li#nav-map.nav-item(data-panel-id='map')
                 a Letter Map
               li#nav-gallery.nav-item(data-panel-id='gallery')
@@ -93,7 +104,8 @@ html(lang='en')
           ul#nav
             //- li#nav-home.nav-item(data-panel-id='home')
             //-   a Home
-            // <li id="nav-send-a-letter" class="nav-item" data-panel-id="send-a-letter"><a>Send a Letter</a></li>
+            li#nav-send-a-letter.nav-item( data-panel-id="send-a-letter" )
+                a Send a Letter
             li#nav-map.nav-item(data-panel-id='map')
               a Letter Map
             li#nav-gallery.nav-item(data-panel-id='gallery')
@@ -107,101 +119,84 @@ html(lang='en')
             a.addthis_button_tweet
         // End .menu
         // End .header
-        .sixteen.columns.intro
-          #icons.icons.hidden-sm
-          img.img-responsive.visible-sm.centered(src='images/icons.png')
+        .intro
           p.lg
             | Snail Mail My Email is a worldwide community art project where volunteers handwrite strangers' emails and send physical letters to the intended recipients, free of charge.
+          img.img-responsive.centered(src='images/smme-icons.png')
           p.lg2
-            | In 2014, 390 volunteers collectively sent <bold>7,000+ letters</bold> over a five day span. A massive thanks to all who participated.
-          br
-          br
-          //- <p class="lg">For one week only (Nov. 10-16, 2014), we invite you to type a message to anyone&mdash; family, friend, secret crush, or congressional representative&mdash; and <a id="nav-send-a-letter" class="nav-item" data-panel-id="send-a-letter">send it to us</a>. We'll then handwrite your message and post it via regular mail to the recipient of your choosing, for free!</p>
-          //- <br><br><br>
-          .centered.hidden-sm
-            span.lg
-              a.lg(href='https://www.facebook.com/snailmailmyemail', target='_blank') Stay in touch
-              a.lg(href='http://www.amazon.com/Snail-Mail-My-Email-Handwritten/dp/1402273827/', target='_blank') Get the book
-              a.lg(href='http://eepurl.com/bfWs9L', target='_blank') Volunteer
-              a.learn-more(data-panel-id='footer-lg') Learn More
-          .centered.visible-sm
-            span.lg
-              a.lg(href='https://www.facebook.com/snailmailmyemail', target='_blank') Stay in touch
-              br
-              br
-              a.lg(href='http://www.amazon.com/Snail-Mail-My-Email-Handwritten/dp/1402273827/', target='_blank') Get the book
-              br
-              br
-              a.lg(href='http://eepurl.com/bfWs9L', target='_blank') Volunteer
-              br
-              br
-              a.learn-more(data-panel-id='footer-sm') Learn More
-          br
-        #send-a-letter.sixteen.columns
-          hr.small
-          hr.hidden
-          h1.center Send a Letter
-          #form-wrapper
-            form(id='', action='POST')
-              .left
-                #email
-                  .title.bold.black YOUR EMAIL:
-                  input#input-email(type='text', rows='22', name='email')
-                  .small.black
-                    em This will be used to confirm your request and will never be shared.
-                #name-address
-                  .title.bold.black RECIPIENT'S FULL NAME & MAILING ADDRESS:
-                  #address-text
-                    input#input-name.name-address(type='text')
-                    input#input-address1.name-address(type='text')
-                    input#input-address2.name-address(type='text')
-                    input#input-address3.name-address(type='text')
-              .right
-                #custom-option.hidden-sm
-                  .title.bold.black ONE CUSTOM OPTION:
-                  input.custom(type='radio', name='custom-option', checked='1', value='Doodle')
-                  em Doodle
-                  input.custom(type='radio', name='custom-option', value='Lipstick Kiss')
-                  em Lipstick Kiss
-                  input.custom(type='radio', name='custom-option', value='Flower Petal')
-                  em Flower Petal
-                  br
-                  #suggest-your-own
-                    input.custom(type='radio', name='custom-option', value='Suggest your own')
-                    em Suggest your own
-                  input#custom-suggestion(type='text', value='', disabled='')
-                #custom-option-small.visible-sm
-                  select#custom-option-dropdown
-                    option(name='custom-option', value='default') ONE CUSTOM OPTION:
-                    option(name='doodle', value='Doodle') Doodle
-                    option(name='lipstick-kiss', value='Lipstick Kiss') Lipstick Kiss
-                    option(name='flower-petal', value='Flower Petal') Flower Petal
-                    option(name='suggest-your-own', value='Suggest your own') Suggest your own
-                  input#custom-suggestion-small(type='text', value='', disabled='')
-                #message
-                  .title.bold.black
-                    | MESSAGE: 
-                    span#message-counter 800 Characters
-                  textarea#message-text(name='message', maxlength='800')
-                #legal
-                  input#legal-checkbox(type='checkbox', name='legal')
-                  #legal-text.small.black
-                    | Check here once you've read over your letter for spelling errors and agree to our 
-                    a#privacy-btn Privacy 
-                    & 
-                    a#legal-btn Legal Notice. 
-                    Only one request per person please.
-                #form-button SEND LETTER
-        #map.sixteen.columns
+            | Over 700 volunteers have artistically interpreted and collectively sent 23,500+ letters across the world since the project began in 2011.
+        hr
+        .smme-v
+          h1.center SMME V
+          p We’re a week-long annual event held every fall. 
+          p Join us November 9-13, 2015 for SMME V: 
+          div.countdown
+            span#clock
+        //- #send-a-letter
+        //-   h1.center Send a Letter
+        //-   #form-wrapper
+        //-     form(id='', action='POST')
+        //-       .left
+        //-         #email
+        //-           .title.bold.black YOUR EMAIL:
+        //-           input#input-email(type='text', rows='22', name='email')
+        //-           .small.black
+        //-             em This will be used to confirm your request and will never be shared.
+        //-         #name-address
+        //-           .title.bold.black RECIPIENT'S FULL NAME & MAILING ADDRESS:
+        //-           #address-text
+        //-             input#input-name.name-address(type='text')
+        //-             input#input-address1.name-address(type='text')
+        //-             input#input-address2.name-address(type='text')
+        //-             input#input-address3.name-address(type='text')
+        //-       .right
+        //-         #custom-option.hidden-sm
+        //-           .title.bold.black ONE CUSTOM OPTION:
+        //-           input.custom(type='radio', name='custom-option', checked='1', value='Doodle')
+        //-           em Doodle
+        //-           input.custom(type='radio', name='custom-option', value='Lipstick Kiss')
+        //-           em Lipstick Kiss
+        //-           input.custom(type='radio', name='custom-option', value='Flower Petal')
+        //-           em Flower Petal
+        //-           br
+        //-           #suggest-your-own
+        //-             input.custom(type='radio', name='custom-option', value='Suggest your own')
+        //-             em Suggest your own
+        //-           input#custom-suggestion(type='text', value='', disabled='')
+        //-         #custom-option-small.visible-sm
+        //-           select#custom-option-dropdown
+        //-             option(name='custom-option', value='default') ONE CUSTOM OPTION:
+        //-             option(name='doodle', value='Doodle') Doodle
+        //-             option(name='lipstick-kiss', value='Lipstick Kiss') Lipstick Kiss
+        //-             option(name='flower-petal', value='Flower Petal') Flower Petal
+        //-             option(name='suggest-your-own', value='Suggest your own') Suggest your own
+        //-           input#custom-suggestion-small(type='text', value='', disabled='')
+        //-         #message
+        //-           .title.bold.black
+        //-             | MESSAGE: 
+        //-             span#message-counter 800 Characters
+        //-           textarea#message-text(name='message', maxlength='800')
+        //-         #legal
+        //-           input#legal-checkbox(type='checkbox', name='legal')
+        //-           #legal-text.small.black
+        //-             | Check here once you've read over your letter for spelling errors and agree to our 
+        //-             a#privacy-btn Privacy
+        //-             | &nbsp;&  
+        //-             a#legal-btn Legal Notice
+        //-             | .
+        //-             | Only one request per person please.
+        //-         #form-button SEND LETTER
+        //- hr
+        #map
           div.map-wrap
             div.disable
             h1.center Letter Map
             iframe.hidden-sm(width='940', height='450', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://www.google.com/fusiontables/embedviz?viz=MAP&q=select+col2+from+1qcA0VEDdXxEY6jQXhhxsitwdiz4a8IqS-chF6Jg&h=false&lat=7.876220617598055&lng=-12.864885499999987&z=2&t=1&l=col2&y=1&tmplt=-1')
             iframe.visible-sm(width='100%', height='250', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://www.google.com/fusiontables/embedviz?viz=MAP&q=select+col2+from+1qcA0VEDdXxEY6jQXhhxsitwdiz4a8IqS-chF6Jg&h=false&lat=7.876220617598055&lng=-12.864885499999987&z=0&t=1&l=col2&y=1&tmplt=-1')
-          img(src='images/map-key.png')
-        #gallery.sixteen.columns
-          hr.small
-          hr.hidden
+          div.map-key
+            p = Letter Destination
+        hr
+        #gallery
           h1.center Letter Gallery
           hr.hidden
           script(src='http://snapwidget.com/js/snapwidget.js')
@@ -209,102 +204,17 @@ html(lang='en')
           iframe.hidden-sm(src='http://snapwidget.com/p/widget/?id=6Uy9uC7b3p&t=247', title='Instagram Widget', allowtransparency='true', frameborder='0', scrolling='no', style='border:none; overflow:hidden; width:100%;height:594px;')
           // SnapWidget
           iframe#snap-frame.visible-sm(src='http://snapwidget.com/p/widget/?id=iewt6Jkf9v&t=372', title='Instagram Widget', allowtransparency='true', frameborder='0', scrolling='no')
-        hr.hidden
-        #book-lg.sixteen.columns.hidden-sm
-          hr.small
-          hr.hidden
-          hr.hidden
-          map.hidden-sm(name='book')
+        hr
+        #book-lg
+          h1.center The Book
+          map(name='book')
             area(href='http://www.amazon.com/Snail-Mail-My-Email-Handwritten/dp/1402273827/', alt='Snail Mail My Email - Amazon Link', shape='RECT', coords='940,450,0,0')
             area(href='http://www.amazon.com/Snail-Mail-My-Email-Handwritten/dp/1402273827/', alt='Snail Mail My Email - Amazon Link', shape='RECT', coords='380,520,230,485')
             area(href='http://www.barnesandnoble.com/w/snail-mail-my-email-ivan-cash/1112061521', alt='Snail Mail My Email - Barnes and Nobles Link', shape='RECT', coords='523,520,400,485')
             area(href='http://www.indiebound.org/book/9781402273827', alt='Snail Mail My Email - IndieBound', shape='RECT', coords='710,520,542,485')
           img.hidden-sm(style='margin-bottom:30px;', src='images/book-snailmailmyemail-website-2013.png', alt='snail mail my emaill book', height='540', width='940', usemap='#book')
-        hr.hidden
-        hr.small
-        hr.hidden
-        #footer-sm.visible-sm
-          #footer-about
-            h3 About
-            // <p style="font-size:13px">The Snail Mail My Email project aims to reignite the lost art of letter writing, reminding us of the power of personal connection in an increasingly digital world.</p>
-            p
-              | SMME was created in 2011 by artist 
-              a( target="_blank" href='http://ivancash.com/') Ivan Cash
-              | , who originally conceived the project as a one-time, month long initiative where he would write and send out strangers’ emails one at a time.
-            p
-              | The project ultimately received over 10,000 letter submissions and prompted Cash to enlist the help of hundreds of volunteers, sending letters all over the world.
-            p
-              | SMME has since transitioned to a week-long annual event, held every November that anyone – even you – can participate in.
-            // The next installment is scheduled to run from November 11th - 17th, 2013.
-            p
-          hr.small
-          #footer-team
-            h3 Team
-            p The latest SMME Team includes: 
-            ul.none
-              li
-                strong Creator
-                br
-                a(href='http://ivancash.com/', target='_blank', title='Visit Link') Ivan Cash
-                | , San Francisco, CA
-              //
-                <li>
-                <strong>Project Manager</strong><br/><a href="http://www.linkedin.com/in/lucytan" target="_blank" title="Visit Link">Lucy Tan</a>, New York, NY
-                </li>
-              li
-                strong Administrator
-                br
-                a(href='http://terryfarris.com', target='_blank', title='Visit Link') Terry Farris
-                | , Oklahoma City, OK
-              li
-                strong Organizers
-                br
-                a(href='http://lifepreserversblog.com', target='_blank', title='Visit Link') Beth Schmidt
-                | , Pittsburgh, PA
-                br
-                a(href='http://twitter.com/Cailyn', target='_blank', title='Visit Link') Cailyn Huston
-                | , Lexington, KY
-                br
-                // <a href="http://www.linkedin.com/in/muchbtr/" target="_blank" title="Visit Link">Ben Richards</a>, Kalamazoo, MI<br/>
-                a(href='http://analogplanets.tumblr.com/', target='_blank', title='Visit Link') Emily Arnold
-                | , New York, NY
-                br
-                a(href='http://deadtomsded.tumblr.com/', target='_blank', title='Visit Link') Kristin Huben
-                | , Jacksonville, FL
-              //
-                <li>
-                <strong>Photo Editor</strong><br/>Chris Boyce, Syracuse, NY
-                </li>
-              li
-                strong Location Tracker
-                br
-                a(href='http://seegammarays.tumblr.com', target='_blank', title='Visit Link') David Johnson
-                | , San Francisco, CA
-              li
-                strong Complete List of Volunteers
-                br
-                a(href='snailmailmyemail_team_2014.pdf') SMME 2014
-                br
-                a(href='snailmailmyemail_team_2013.pdf') SMME 2013
-                br
-                a(href='snailmailmyemail_team_2012.pdf') SMME 2012
-                br
-                a(href='snailmailmyemail_team.pdf') SMME 2011
-                br
-          hr.small
-          #footer-involved
-            h3 Get Involved
-            // <p><P><strong>Nov 11, 2013:</strong> We are accepting letter artist volunteers: <a href="smme-volunteer-information-2013.pdf">Sign up here</a>.</P>
-            p
-              | Join our 
-              a(href='http://www.facebook.com/snailmailmyemail') Facebook Page
-              |  to stay in touch and receive updates about the project and related news:
-            //
-              or <a href="http://twitter.com/#!/SnailMailEmail">follow us on Twitter</a>.   <p><a href="http://twitter.com/SnailMailEmail" class="twitter-follow-button">Follow @SnailMailEmail</a>
-              <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script></p>
-            iframe(src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fsnailmailmyemail&width=260&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=315', scrolling='no', frameborder='0', style='border:none; overflow:hidden; width:100%; height:315px;', allowtransparency='true')
-            p
-        #footer-lg.hidden-sm
+        hr
+        #footer-lg
           .one-third.column.border
             h3 About
             // <p style="font-size:13px">The Snail Mail My Email project aims to reignite the lost art of letter writing, reminding us of the power of personal connection in an increasingly digital world.</p>
@@ -321,7 +231,7 @@ html(lang='en')
             p
           .one-third.column.border
             h3 Team
-            p The latest SMME Team includes: 
+            p The latest SMME Team includes:
             ul.none
               li
                 strong Creator
@@ -352,6 +262,12 @@ html(lang='en')
                 br
                 a(href='http://deadtomsded.tumblr.com/', target='_blank', title='Visit Link') Kristin Huben
                 | , Jacksonville, FL
+                br
+                a(href='http://zhangjenny.tumblr.com/', target='_blank', title='Visit Link') Jenny Zhang
+                | , New York, NY
+                br
+                a(href='http://seriouslady.org/', target='_blank', title='Visit Link') Molly Fenn
+                | , Oakland, CA
               //
                 <li>
                 <strong>Photo Editor</strong><br/>Chris Boyce, Syracuse, NY
@@ -360,6 +276,16 @@ html(lang='en')
                 strong Location Tracker
                 br
                 a(href='http://seegammarays.tumblr.com', target='_blank', title='Visit Link') David Johnson
+                | , San Francisco, CA
+              li
+                strong Tech Director
+                br
+                a(href='http://mpastore.co', target='_blank', title='Visit Link') Mike Pastore
+                | , Chicago, IL
+              li
+                strong Design / Development
+                br
+                a(href='http://laithazzam.com', target='_blank', title='Visit Link') Laith Azzam
                 | , San Francisco, CA
               li
                 strong Complete List of Volunteers
@@ -384,7 +310,7 @@ html(lang='en')
               <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script></p>
             iframe(src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fsnailmailmyemail&width=260&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=315', scrolling='no', frameborder='0', style='border:none; overflow:hidden; width:260px; height:315px;', allowtransparency='true')
             p
-        .sixteen.columns.press
+        .press
           ul.none
             li Featured In:
             li
@@ -424,6 +350,7 @@ html(lang='en')
     script(src='scripts/jquery.scrollTo.js')
     script(src='scripts/jquery.client.js')
     script(src='scripts/jquery.widowFix-1.3.2.js')
+    script(src='scripts/jquery.countdown.min.js')
     script(src='scripts/smmeform.js')
     script.
       $(document).ready(function() {
