@@ -12,3 +12,284 @@
 		
 	}
 }
+
+
+
+@media (max-width: 959px){
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width:100%; 
+		height: 612px;
+		}
+	#thebook-image{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		height: 600px;
+		background: url(images/book-600.png) no-repeat white center top;
+		background-size: cover;
+		}
+	
+	.column.one-third.border {
+		background: none;
+	}
+	.img-responsive{
+		height: auto;
+		width: 100%;
+		}
+	p.lg{
+		font-size: 18px;
+		}
+	p.lg2 {
+		font-size: 15px;
+	}
+	.lg{ font-size: 20px; }
+	.visible-sm{
+		display: inline;
+		}
+	.hidden-sm{
+		display: none;
+		}
+	#small-menu-hamburger{
+		z-index: 998;
+		position: fixed;
+		text-indent: 50px;
+		line-height: 40px;
+		color: transparent;
+		top: 0px;
+		left: 0px;
+		width: 55px;
+		height: 40px;
+		display: block;
+		background: #ffffff url(images/hamburger-nav.png) no-repeat;
+		background-position: 15px 12px;
+		cursor: pointer;
+		padding-left: 10px;
+		padding-top: 10px;
+		}	
+	#small-menu-slider{
+		position: fixed;
+		z-index: 999;
+		top:0px;
+		left:-221px;
+		width: 220px;
+		height: 100%;
+		background: #ffffff;
+		border-right: 1px solid gray;
+		border-bottom: 1px solid gray;
+		}
+		#small-menu-slider #small-nav{
+			margin: 30px;
+			z-index: 999;
+			}
+		#small-nav li{
+			float: none;
+			height: 32px;
+			line-height: 32px;
+			}
+		#small-menu-close{
+			position: absolute;
+			top: 10px; 
+			right: 10px;
+			display: block;
+			cursor: pointer;
+			}
+		
+		#small-menu-slider #small-nav li{
+			cursor: pointer;
+			float: none;
+			height: 38px;
+			line-height: 28px;
+			text-align: left;
+			width: 150px;
+			border-bottom: 1px solid silver;
+			}
+			#small-menu-slider #small-nav li:last-child{
+				border-bottom: none;
+				}
+		#small-nav li a, #small-nav li a:hover, #small-nav li a:visited{
+			text-decoration: none !important;
+			}	
+		#small-menu-slider #social-small{
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+			}
+			#small-menu-slider #social-small a{
+				float: none;
+				width: 200px;
+				height: 30px;
+				margin: 5px 0px;
+				}
+		.thebook-link{
+			width: 100%;
+			max-width: 600px;
+			min-width: 320px;
+			margin: 0 auto;
+			text-align: center;
+			background: #ffffff;
+			}	
+
+	#footer #footer-about, #footer #footer-team, #footer #footer-involved{
+		text-align: center;
+		float: none;
+		width: 90% !important;
+		position: relative;
+		margin: 0 auto !important;
+		padding: 0px !important; 
+		}
+	.press ul{
+		float: none;
+		width: 200px;
+		margin: 0 auto;
+		}
+	.press ul li{
+		padding: 0px;
+		float: none;
+		margin: 5px 0;
+		text-align: center;
+		width: 200px;
+		}	
+}	
+
+
+
+@media (max-width: 800px){
+	.visible-lg{
+		display: inline;
+		}
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width: 100%; 
+		height: 340px;
+		}
+	#home {
+		.hero-press {
+			display: none;
+		}
+	}
+
+		.container {
+			width: 85%;
+		}
+
+	#book-lg {
+		.book-hero {
+			flex-flow: column;
+			margin: 15px 0px;
+		}
+		.bookshot {
+			width: 70%;
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+		.reviews {
+			width: 100%;
+			margin-top: 15px;
+		}
+		.actions {
+			ul {
+				flex-flow: column;
+			}
+			li {
+				width: 45%;
+				max-width: 200px;
+				margin: 0px;
+				margin-bottom: 10px;
+				border: 0;
+			}
+		}
+	}
+
+	#footer-lg {
+		flex-flow: wrap;
+		hr.mid {
+			display: inherit;
+			margin-bottom: 45px;
+		}
+		div:first-of-type {
+			width: 90%;
+			margin-bottom: 25px;
+		}
+		div:nth-child(2), div:nth-child(3) {
+			width: 50%;
+			margin: 0px;
+		}
+	}
+}	
+
+@media (max-width: 550px){
+	#videobg {
+		display: none;
+	}
+	#home {
+		background: url(images/poster.jpg) no-repeat center center;
+		background-size: cover;
+		margin-top: 0px;
+		height: 100%;
+	}
+	.hidden-sm{
+		display: none;	
+		}
+	.visible-lg{
+		display: none;
+		}
+	.visible-md{
+		display: inline;	
+		}
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width: 100%; 
+		height: 502;
+	}
+	.map-wrap {
+		h1 {
+			width: 100%;
+		}
+	}
+	#footer-lg {
+		hr.small {
+			margin: 35px 0px;
+			display: inherit;
+		}
+		div {
+			p:last-of-type{
+				margin-bottom: 0px;
+			}
+			li:last-of-type {
+				margin-bottom: 0px;
+			}
+			ul {
+				margin-bottom: 0px;
+			}
+		}
+		div:nth-child(1){
+			margin-bottom: 0px;
+		}
+		div:nth-child(2), div:nth-child(3) {
+			width: 100%;
+		}
+		div:nth-child(2) {
+			margin-bottom: 25px;
+		}
+	}
+}	
+
+
+@media (max-width: 399px ){
+	.visible-lg{
+		display: none;
+		}
+	.visible-md{
+		display: hidden;	
+		}	
+	#snap-frame{
+		border:none; 
+		overflow:hidden; 
+		width:100%; 
+		height: 362px;
+		}
+}
