@@ -67,15 +67,23 @@ html(lang='en')
         source(src="videos/smme_bg.mp4", type="video/mp4", poster="images/poster.jpg")
     #home()
       img#logo(src='images/smme-logo-vertical-white.png')
-      div.press
-        img(src="images/press-logos-white/cnn.png" alt="cnn")
-        img(src="images/press-logos-white/forbes.png" alt="forbes")
-        img(src="images/press-logos-white/gizmodo.png" alt="gizmodo")
-        img(src="images/press-logos-white/la-times.png" alt="la-times")
-        img(src="images/press-logos-white/mashable.png" alt="mashable")
-        img(src="images/press-logos-white/post-secret.png" alt="post-secret")
-        img(src="images/press-logos-white/usps.png" alt="usps")
-        img(src="images/press-logos-white/wsj.png" alt="wsj")
+      div.hero-press
+        a( href="http://www.cnn.com/2011/TECH/web/08/04/snail.mail.email/" target="_blank" )
+          img(src="images/press-logos-white/cnn.png" alt="cnn")
+        a( href="http://www.forbes.com/sites/mzhang/2015/07/01/from-robots-and-e-mails-to-handwritten-letters-using-tech-to-reverse-tech/" target="_blank" )
+          img(src="images/press-logos-white/forbes.png" alt="forbes")
+        a( href="http://gizmodo.com/5822850/get-the-thoughtfulness-of-snail-mail-with-none-of-the-effort" target="_blank" )
+          img(src="images/press-logos-white/gizmodo.png" alt="gizmodo")
+        a( href="http://latimesblogs.latimes.com/technology/2011/08/snail-mail-email.html" target="_blank" )
+          img(src="images/press-logos-white/la-times.png" alt="la-times")
+        a( href="http://mashable.com/2013/11/13/snail-mail-my-email/" target="_blank" )
+          img(src="images/press-logos-white/mashable.png" alt="mashable")
+        a( href="https://twitter.com/postsecret/status/103910183486504960" target="_blank" )
+          img(src="images/press-logos-white/post-secret.png" alt="post-secret")
+        a( href="http://uspsstamps.com/stories/pixels-postage" target="_blank" )
+          img(src="images/press-logos-white/usps.png" alt="usps")
+        a( href="http://blogs.wsj.com/digits/2011/07/25/the-pen-is-mightier-an-online-service-transcribes-email-by-hand/#" target="_blank" )
+          img(src="images/press-logos-white/wsj.png" alt="wsj")
     .wrap
       .container
         #small-menu.visible-sm
@@ -85,8 +93,10 @@ html(lang='en')
             ul#small-nav
               //- li#nav-home.nav-item(data-panel-id='home') 
               //-   a Home
-              li#nav-send-a-letter.nav-item( data-panel-id="send-a-letter" )
-                a Send a Letter
+              li#nav-smme-v.nav-item( data-panel-id="smme-v" )
+                a SMME-V
+              //- li#nav-send-a-letter.nav-item( data-panel-id="send-a-letter" )
+              //-   a Send a Letter
               li#nav-map.nav-item(data-panel-id='map')
                 a Letter Map
               li#nav-gallery.nav-item(data-panel-id='gallery')
@@ -104,8 +114,10 @@ html(lang='en')
           ul#nav
             //- li#nav-home.nav-item(data-panel-id='home')
             //-   a Home
-            li#nav-send-a-letter.nav-item( data-panel-id="send-a-letter" )
-                a Send a Letter
+            li#nav-smme-v.nav-item( data-panel-id="smme-v" )
+                a SMME-V
+            //- li#nav-send-a-letter.nav-item( data-panel-id="send-a-letter" )
+            //-   a Send a Letter
             li#nav-map.nav-item(data-panel-id='map')
               a Letter Map
             li#nav-gallery.nav-item(data-panel-id='gallery')
@@ -126,7 +138,7 @@ html(lang='en')
           p.lg2
             | Over 700 volunteers have artistically interpreted and collectively sent 23,500+ letters across the world since the project began in 2011.
         hr
-        .smme-v
+        #smme-v
           h1.center SMME V
           p We’re a week-long annual event held every fall. 
           p Join us November 9-13, 2015 for SMME V: 
@@ -207,15 +219,34 @@ html(lang='en')
         hr
         #book-lg
           h1.center The Book
-          map(name='book')
-            area(href='http://www.amazon.com/Snail-Mail-My-Email-Handwritten/dp/1402273827/', alt='Snail Mail My Email - Amazon Link', shape='RECT', coords='940,450,0,0')
-            area(href='http://www.amazon.com/Snail-Mail-My-Email-Handwritten/dp/1402273827/', alt='Snail Mail My Email - Amazon Link', shape='RECT', coords='380,520,230,485')
-            area(href='http://www.barnesandnoble.com/w/snail-mail-my-email-ivan-cash/1112061521', alt='Snail Mail My Email - Barnes and Nobles Link', shape='RECT', coords='523,520,400,485')
-            area(href='http://www.indiebound.org/book/9781402273827', alt='Snail Mail My Email - IndieBound', shape='RECT', coords='710,520,542,485')
-          img.hidden-sm(style='margin-bottom:30px;', src='images/book-snailmailmyemail-website-2013.png', alt='snail mail my emaill book', height='540', width='940', usemap='#book')
+          div.book-hero
+            img.bookshot(src='images/smme_book.png', alt='snail mail my emaill book')
+            div.reviews
+              ul
+                li 
+                  p "How heartfelt emails become works of art." 
+                  p —postsecret
+                li 
+                  p "Call it technology in reverse."
+                  p —CNN
+                li 
+                  p "Marries the romance of analog with the convenience of digital."
+                  p —GOOD
+          div.actions
+            ul
+              li
+                a( href="http://www.amazon.com/Snail-Mail-My-Email-Handwritten/dp/1402273827/" target="_blank" )
+                  img( src="images/amazon.png" )
+              li
+                a( href="http://www.barnesandnoble.com/w/snail-mail-my-email-ivan-cash/1112061521" target="_blank" )
+                  img( src="images/barns.png" )
+              li
+                a( href="http://www.indiebound.org/book/9781402273827" target="_blank" )
+                  img( src="images/indiebound.png" )
+
         hr
         #footer-lg
-          .one-third.column.border
+          div
             h3 About
             // <p style="font-size:13px">The Snail Mail My Email project aims to reignite the lost art of letter writing, reminding us of the power of personal connection in an increasingly digital world.</p>
             p
@@ -227,9 +258,8 @@ html(lang='en')
               | The project ultimately received over 10,000 letter submissions and prompted Cash to enlist the help of hundreds of volunteers sending letters all over the world.
             p
               | SMME has since transitioned to a week-long annual event, held every November that anyone – even you – can participate in.
-            // The next installment is scheduled to run from November 11th - 17th, 2013.
-            p
-          .one-third.column.border
+          hr.small.mid
+          div
             h3 Team
             p The latest SMME Team includes:
             ul.none
@@ -298,7 +328,8 @@ html(lang='en')
                 br
                 a(href='snailmailmyemail_team.pdf', target='_blank') SMME 2011
                 br
-          .one-third.column.border.last
+          hr.small
+          div
             h3 Get Involved
             // <p><P><strong>Nov 11, 2013:</strong> We are accepting letter artist volunteers: <a href="smme-volunteer-information-2013.pdf">Sign up here</a>.</P>
             p

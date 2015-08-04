@@ -59,19 +59,21 @@ $(document).ready(function()
 	//SCROLL LISTENER FOR TOP NAV AND WAYPOINTS
 	$(window).scroll(function(){			
 		var homeTop = $('#logo').offset().top - $(window).scrollTop();
-		var letterTop = $('#send-a-letter').offset().top - $(window).scrollTop();
+		var smmevTop = $('#smme-v').offset().top - $(window).scrollTop();
+		// var letterTop = $('#send-a-letter').offset().top - $(window).scrollTop();
 		var mapTop = $('#map').offset().top - $(window).scrollTop();
 		var galleryTop = $('#gallery').offset().top - $(window).scrollTop();
 		var bookTop = $('#book-lg').offset().top - $(window).scrollTop();
 		var footerTop = $('#footer-lg').offset().top - $(window).scrollTop();
 		
 			
-		if(homeTop <= 45 && $('#nav-home').hasClass('current') != true && isInViewport( $('#logo') ) ) { highlightNav('nav-home'); } else {};
-		if(letterTop <= 45 && $('#nav-send-a-letter').hasClass('current') != true && isInViewport( $('#send-a-letter') ) ) { highlightNav('nav-send-a-letter'); } else {};
-		if(mapTop <= 45 && $('#nav-map').hasClass('current') != true && isInViewport( $('#map') )) { highlightNav('nav-map'); } else {};
-		if(galleryTop <= 45 && $('#nav-gallery').hasClass('current') != true && isInViewport( $('#gallery') )) { highlightNav('nav-gallery'); } else {};
-		if(bookTop <= 45 && $('#nav-book').hasClass('current') != true && isInViewport( $('#book-lg') )) { highlightNav('nav-book'); } else {};
-		if(footerTop <= 45 && $('#nav-footer').hasClass('current') != true && isInViewport( $('#footer-lg') )) { highlightNav('nav-footer'); } else {};
+		// if(homeTop <= 45 && $('#nav-home').hasClass('current') != true && isInViewport( $('#logo') ) ) { highlightNav('nav-home'); } else {};
+		if(smmevTop <= 100 && $('#smme-v').hasClass('current') != true && isInViewport( $('#smme-v') ) ) { highlightNav('nav-smme-v'); } else {};
+		// if(letterTop <= 100 && $('#nav-send-a-letter').hasClass('current') != true && isInViewport( $('#send-a-letter') ) ) { highlightNav('nav-send-a-letter'); } else {};
+		if(mapTop <= 100 && $('#nav-map').hasClass('current') != true && isInViewport( $('#map') )) { highlightNav('nav-map'); } else {};
+		if(galleryTop <= 100 && $('#nav-gallery').hasClass('current') != true && isInViewport( $('#gallery') )) { highlightNav('nav-gallery'); } else {};
+		if(bookTop <= 100 && $('#nav-book').hasClass('current') != true && isInViewport( $('#book-lg') )) { highlightNav('nav-book'); } else {};
+		if(footerTop <= 100 && $('#nav-footer').hasClass('current') != true && isInViewport( $('#footer-lg') )) { highlightNav('nav-footer'); } else {};
 	});
 	
 	function isInViewport( item )

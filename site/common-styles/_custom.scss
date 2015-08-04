@@ -10,6 +10,9 @@
 /* Custom Styles added by Scottblew.me
 ================================================== */
 
+$blue: #00abeb;
+$red: #ed3e41;
+$orange: #f89649;
 
 body {
 	background:#e4e4e4 url(images/beige_paper.png) repeat 0 0 scroll;
@@ -48,27 +51,36 @@ html, body {
 		top: 50%; left: 50%; 
 		@include transform(translate(-50%,-50%));
 	}
-	.press {
+	.hero-press {
 		position: absolute;
 		bottom: 5px; left: 5%;
 		width: 90%;
 		height: auto;
-		opacity: .8;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		img {
+		a {
 			width: calc(100% / 8);
+			opacity: .8;
+			@include transition(all, 250ms, ease-out);
+			img {
+				width: 100%;
+			}
+		}
+		a:hover {
+			opacity: 1;
+			@include transform(scale(1.1));
 		}
 
 	}
-	.press::before {
+	.hero-press::before {
 		content: 'As Seen On';
 		position: absolute;
 		top: -15px;
-		left: 30px;
+		left: 3.5%;
 		color: white;
 		font-size: 14px;
+		opacity: .4;
 	}
 }
 .intro {
@@ -201,7 +213,7 @@ p.lg2 {
 		}
 }
 
-.smme-v {
+#smme-v {
 	width: 100%;
 	text-align: center;
 	margin: 35px 0px;
@@ -221,13 +233,13 @@ p.lg2 {
 			font-weight: bold;
 		}
 		span:first-of-type, span:last-of-type{
-			color: #00abeb;
+			color: $blue;
 		}
 		span:nth-of-type(2){
-			color: #ed3e41;
+			color: $red;
 		}
 		span:nth-of-type(3){
-			color: #f89649;
+			color: $orange;
 		}
 	}
 }
@@ -236,8 +248,101 @@ p.lg2 {
 #gallery, #book-lg, #footer-lg {
 	margin: 35px 0px;
 }
+
+#book-lg {
+	.book-hero {
+		margin-top: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		padding: 25px;
+		border: 2px solid black;
+	}
+	.bookshot {
+		width: 50%;
+	}
+	.reviews{
+		width: 50%;
+		ul {
+			margin-bottom: 0px;
+		}
+		li {
+			width: 100%;
+			text-align: center;
+			font-size: 25px;
+			margin: 0px;
+			margin-bottom: 15px;
+			p {
+				margin: 0px;
+			}
+			p:first-of-type {
+				font-weight: bold;
+				font-style: italic;
+			}
+			p:last-of-type {
+				font-size: 14px;
+			}
+		}
+		li:first-of-type{
+			p:first-of-type{
+				color: $red;
+			}
+		}
+		li:nth-of-type(2){
+			p:first-of-type{
+				color: $blue;
+			}
+		}
+		li:last-of-type{
+			margin-bottom: 0px;
+			p:first-of-type{
+				color: $orange;
+			}
+		}
+	}
+	.actions {
+		clear: both;
+		ul {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: row;
+			margin-top: -2px;
+		}
+		li {
+			margin-right: 15px;
+			width: 15%;
+			box-sizing: border-box;
+			padding: 5px 10px;
+			border: 2px solid black;
+			@include transition(all, 250ms, ease-out);
+			opacity: .8;
+			img {
+				width: 100%;
+				@include transform(scale(.85));
+				@include transition(all, 250ms, ease-out);
+			}
+		}
+		li:hover {
+			opacity: 1;
+			@include transform(scale(1.05) translate(0px,2px));
+			img {
+				@include transform(scale(.9));
+			}
+		}
+	}
+}
+
 #footer-lg {
 	display: flex;
+	div {
+		width: 32%;
+	}
+	div:nth-child(2){
+		margin: 0px 2%;
+	}
 	.press {
 		margin-top: 60px;
 	}
@@ -277,8 +382,10 @@ hr {
 	height:2px;
 }
 
-hr.small {
+hr.small, hr.mid {
 	margin: 10px 0 15px;
+	width: 100%;
+	display: none;
 }
 
 hr.space {
@@ -334,7 +441,8 @@ hr.hidden {
 	}
 
 .press{
-	}
+	margin: 25px 0px;
+}
 
 .press ul {
 	margin:0px auto;
@@ -525,7 +633,7 @@ hr.hidden {
 		height: 340px;
 		}
 	#home {
-		.press {
+		.hero-press {
 			display: none;
 		}
 	}
@@ -533,9 +641,62 @@ hr.hidden {
 		.container {
 			width: 85%;
 		}
+
+	#book-lg {
+		.book-hero {
+			flex-flow: column;
+			margin: 15px 0px;
+		}
+		.bookshot {
+			width: 70%;
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+		.reviews {
+			width: 100%;
+			margin-top: 15px;
+		}
+		.actions {
+			ul {
+				flex-flow: column;
+			}
+			li {
+				width: 45%;
+				max-width: 200px;
+				margin: 0px;
+				margin-bottom: 10px;
+				border: 0;
+			}
+		}
+	}
+
+	#footer-lg {
+		flex-flow: wrap;
+		hr.mid {
+			display: inherit;
+			margin-bottom: 45px;
+		}
+		div:first-of-type {
+			width: 90%;
+			margin-bottom: 25px;
+		}
+		div:nth-child(2), div:nth-child(3) {
+			width: 50%;
+			margin: 0px;
+		}
+	}
 }	
 
 @media (max-width: 550px){
+	#videobg {
+		display: none;
+	}
+	#home {
+		background: url(images/poster.jpg) no-repeat center center;
+		background-size: cover;
+		margin-top: 0px;
+		height: 100%;
+	}
 	.hidden-sm{
 		display: none;	
 		}
@@ -556,6 +717,32 @@ hr.hidden {
 				width: 100%;
 			}
 		}
+	#footer-lg {
+		hr.small {
+			margin: 35px 0px;
+			display: inherit;
+		}
+		div {
+			p:last-of-type{
+				margin-bottom: 0px;
+			}
+			li:last-of-type {
+				margin-bottom: 0px;
+			}
+			ul {
+				margin-bottom: 0px;
+			}
+		}
+		div:nth-child(1){
+			margin-bottom: 0px;
+		}
+		div:nth-child(2), div:nth-child(3) {
+			width: 100%;
+		}
+		div:nth-child(2) {
+			margin-bottom: 25px;
+		}
+	}
 }	
 
 
