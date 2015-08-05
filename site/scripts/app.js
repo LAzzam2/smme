@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	$('#clock').countdown('2015/11/09 12:34:56')
 		.on('update.countdown', function(event) {
-			var format = '<span>%-D</span> days <span>%-H</span> hours <span>%M</span> minutes <span>%S</span> seconds';
+			var format = '<span>%-D</span> days <br/><span>%-H</span> hours <br/><span>%M</span> minutes <br/><span>%S</span> seconds';
 			$(this).html(event.strftime(format));
 		})
 		.on('finish.countdown', function(event) {

@@ -229,6 +229,9 @@ p.lg2 {
 	}
 	#clock {
 		font-size: 34px;
+		br {
+			display: none;
+		}
 		span {
 			font-weight: bold;
 		}
@@ -716,7 +719,21 @@ hr.hidden {
 		}
 	}
 }	
-
+@media (max-width:720px){
+	#smme-v{
+			text-align: left;
+		#clock {
+			br{
+				display: block;
+			}
+		}
+		.signup {
+			p {
+				left: 53%;
+			}
+		}
+	}
+}
 @media (max-width: 550px){
 	#videobg {
 		display: none;
@@ -766,7 +783,7 @@ hr.hidden {
 		div:nth-child(1){
 			margin-bottom: 0px;
 		}
-		div:nth-child(2), div:nth-child(3) {
+		div:nth-of-type(2), div:nth-of-type(3) {
 			width: 100%;
 		}
 		div:nth-child(2) {
