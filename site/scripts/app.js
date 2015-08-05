@@ -99,5 +99,25 @@ $(document).ready(function() {
 			} 
 		});
 	}); 
+
+	/* Letter Map Scroll
+	================================================== */
+	function mapInView(){
+		mapTop = $('.map-wrap')[0].offsetTop;
+		mapOffsetTop = mapTop - parseInt($(window).scrollTop());
+
+		if(mapOffsetTop >= 0 || mapOffsetTop <= -mapTop ){
+			$('.disable').css({
+				pointerEvents:"inherit",
+				opacity: 1,
+			});
+			$('.disable').siblings('h1').css({top: '50%'});
+			$('.map-wrap').css('margin','125px 0px 0px 0px');
+		}
+	}
+	$( window ).scroll(function() {
+	  mapInView();
+	});
+
 	
 });
