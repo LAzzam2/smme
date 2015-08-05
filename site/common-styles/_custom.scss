@@ -275,7 +275,7 @@ p.lg2 {
 		justify-content: center;
 		background-color: white;
 		padding: 25px;
-		border: 2px solid black;
+		border: 2px solid rgba(0,0,0,.4);
 	}
 	.bookshot {
 		width: 50%;
@@ -334,7 +334,7 @@ p.lg2 {
 			width: 15%;
 			box-sizing: border-box;
 			padding: 5px 10px;
-			border: 2px solid black;
+			border: 2px solid rgba(0,0,0,.4);
 			@include transition(all, 250ms, ease-out);
 			opacity: .8;
 			img {
