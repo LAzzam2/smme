@@ -1,10 +1,4 @@
-# jade-sass-seed ![Mineral](http://rywar.com/github-images/mineral.svg)
-
-Opinionated seed for simple websites that don't use a framework and use minimal JavaScript.
-
-Work in progress!
-
-
+# Snail Mail My Email v2 Front End
 
 ## Local Setup
 
