@@ -671,7 +671,7 @@ hr.hidden {
 		border:none; 
 		overflow:hidden; 
 		width: 100%; 
-		height: 380px;
+		height: 700px;
 		}
 	#home {
 		.hero-press {
@@ -752,8 +752,12 @@ hr.hidden {
 			}
 		}
 	}
+
 }
 @media (max-width: 550px){
+	#snap-frame{
+		height: 380px;
+		}
 	#videobg {
 		display: none;
 	}
