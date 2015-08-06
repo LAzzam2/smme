@@ -56,8 +56,8 @@ html, body {
 	}
 	.hero-press {
 		position: absolute;
-		bottom: 5px; left: 5%;
-		width: 90%;
+		bottom: 10px; left: 10%;
+		width: 80%;
 		height: auto;
 		display: flex;
 		align-items: center;
@@ -66,7 +66,7 @@ html, body {
 			position: relative;
 			img {
 				@include transition(all, 250ms, ease-out);
-				opacity: .8;
+				opacity: .70;
 				width: 100%;
 			}
 		}
