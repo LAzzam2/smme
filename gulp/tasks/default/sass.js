@@ -29,7 +29,7 @@ gulp.task( 'scss-lint', function(  )
 		.on( 'error', error.handler );
 } );
 
-gulp.task( 'sass', [ 'scss-lint' ], function(  )
+gulp.task( 'sass', function(  )
 {
 	return gulp.src( path.to.sass.main )
 		//.pipe( cache( 'sass' ) )
